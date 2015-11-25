@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>videojuegos</title>
+</head>
+<body>
+{% if lista_videojuegos %}
+	<table border="2">
+		<tr>
+			<td>Nombre</td>
+			<td>fecha</td>
+		</tr>
+{% for videojuego in lista_videojuegos %}
+		<tr>
+		
+			<td>{{ videojuego.nombre }}</td>
+			<td>{{ videojuego.fecha }}</td>
+		</tr>
+ 
+</body>
+</html>

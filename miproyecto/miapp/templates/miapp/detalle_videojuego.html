@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Videojuegos</title>
+</head>
+<body>
+		<h1>{{videojuego.nombre}}</h1>
+		<p>{{videojuego.instrucciones}}</p>
+		<ul>
+				
+			{% for Proveedor in Videojuegos.Proveedores.all %}
+				<li>{{ Proveddor.nombre }}</li>
+			{% endfor %}
+		</ul>
+		<p>{{ videojuego.fecha|date:"D d M Y - H:i" }}<p/>
+		<a href="{% url 'indice' %}">Volver</a> 
+</body>
+</html>

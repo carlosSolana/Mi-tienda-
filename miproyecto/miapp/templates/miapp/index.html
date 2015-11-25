@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>videojuegos</title>
+</head>
+<body>
+{% if lista_videojuegos %}
+	<table border="2">
+		<tr>
+			<td>Nombre</td>
+			<td>fecha</td>
+		</tr>
+{% for videojuego in lista_videojuegos %}
+		<tr>
+			<td><a href="{% url 'detalle_videojuego' videojuego.id %}">{{ videojuego.nombre }}</a></td>
+			<td>{{ videojuego.fecha_distribucion }}</td>
+		</tr>
+{% endfor %}
+	</table>
+{% else %}
+		<p>No hay recetas</p>			
+{% endif %}
+ 
+</body>
+</html>

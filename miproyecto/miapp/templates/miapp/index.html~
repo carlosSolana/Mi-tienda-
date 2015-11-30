@@ -3,6 +3,17 @@
 <title>videojuegos</title>
 </head>
 <body>
+		
+<nav>
+	<ul>
+		{% if user.is_authenticated %}	
+		<li><a href="{% url 'logout' %}">Logout</a></li>
+			{% else %}
+	 			<li><a href="{% url 'registro' %}">Registro</a></li>
+				<li><a href="{% url 'login' %}">Login</a></li>
+			{% endif %}
+	</ul>
+</nav>
 {% if lista_videojuegos %}
 	<table border="2">
 		<tr>
@@ -12,7 +23,6 @@
 {% for videojuego in lista_videojuegos %}
 		<tr>
 			<td><a href="{% url 'detalle_videojuego' videojuego.id %}">{{ videojuego.nombre }}</a></td>
-			<td>{{ videojuego.nombre }}</td>
 			<td>{{ videojuego.fecha_distribucion }}</td>
 		</tr>
 {% endfor %}

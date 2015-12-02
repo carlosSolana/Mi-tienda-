@@ -3,7 +3,9 @@
 <title>videojuegos</title>
 </head>
 <body>
-		
+		{% if user.is_authenticated %}
+			<p>Soy {{ user.get_username }}</p>
+			{% endif %}
 <nav>
 	<ul>
 		{% if user.is_authenticated %}	

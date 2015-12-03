@@ -25,7 +25,7 @@ def registro(request):
 			return HttpResponseRedirect("/")
 	else:
 		form = UserCreationForm()
-	return render(request, "videojuego/registro.html", {
+	return render(request, "miapp/registro.html", {
 'form': form,})
 
 def loginpage(request):
@@ -39,12 +39,13 @@ def loginpage(request):
 			return HttpResponseRedirect("/")
 	else:
 			form = AuthenticationForm()
-	return render(request,'videojuego/login.html',{'form': form,})  
+	return render(request,'miapp/login.html', {'form': form,}) 
 
 def logoutpage(request):
 	logout(request)
 	return HttpResponseRedirect("/")
-
+	
+	form = modelForm(request.POST, request.FILES)
 
 
 

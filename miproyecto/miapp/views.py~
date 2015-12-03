@@ -15,7 +15,7 @@ def indice(request):
 
 def detalle_videojuego(request,videojuego_id):
 	videojuego = get_object_or_404(Videojuego, pk = videojuego_id)
-	return render(request, 'videojuego/detalle_videojuego.html', {'videojuego': videojuego })
+	return render(request, 'miapp/detalle_videojuego.html', {'videojuego': videojuego })
 
 def registro(request):
 	if request.method == 'POST':
@@ -25,7 +25,7 @@ def registro(request):
 			return HttpResponseRedirect("/")
 	else:
 		form = UserCreationForm()
-	return render(request, "videojuego/registro.html", {
+	return render(request, "miapp/registro.html", {
 'form': form,})
 
 def loginpage(request):
@@ -39,12 +39,13 @@ def loginpage(request):
 			return HttpResponseRedirect("/")
 	else:
 			form = AuthenticationForm()
-	return render(request,'videojuego/login.html',{'form': form,})  
+	return render(request,'miapp/login.html', {'form': form,}) 
 
 def logoutpage(request):
 	logout(request)
 	return HttpResponseRedirect("/")
-
+	
+		form = modelForm(request.POST, request.FILES)
 
 
 

@@ -17,7 +17,7 @@ class Videojuego (models.Model):
 	precio = models.TextField()
 	proveedor = models.ManyToManyField(Proveedor)
 	usuario = models.ForeignKey(User,default=1)
-	foto = models.ImageField(upload_to='miapp/static/media')
+	foto = models.ImageField(upload_to='miapp/static/media',default=1)
 
 	def __str__(self):
 		return '%s' % (self.nombre)

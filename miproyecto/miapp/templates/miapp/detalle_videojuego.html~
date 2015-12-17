@@ -28,5 +28,4 @@
 
 	<a href="{% url 'indice' %}">Volver</a>
 </body>
-
 </html>

@@ -8,12 +8,15 @@
 		<h1>{{videojuego.nombre}}</h1>
 		<ul>
 				
-			{% for Proveedor in videojuego.Proveedores.all %}
+			{% for Proveedor in videojuego.proveedor.all %}
 				<li>{{ Proveedor.nombre }}</li>
 			{% endfor %}
 		</ul>
 		<p>{{ videojuego.fecha|date:"D d M Y - H:i" }}<p/>
+	<div>
 		<img id="foto_videojuego" src="/{{videojuego.foto}}">
 		<a href="{% url 'indice' %}">Volver</a> 
+	</div>
+
 </body>
 </html>

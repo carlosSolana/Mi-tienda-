@@ -13,7 +13,14 @@
 			{% endfor %}
 		</ul>
 		<p>{{ videojuego.fecha|date:"D d M Y - H:i" }}<p/>
+	<div>
 		<img id="foto_videojuego" src="/{{videojuego.foto}}">
 		<a href="{% url 'indice' %}">Volver</a> 
+	</div>
+	
+	<div>
+		<p></p>
+	<div>
+
 </body>
 </html>

@@ -37,10 +37,7 @@
 			<p>Esta es la web de compra y venta de videojuegos refetrente en cualquier ambito de las plataformas en que se desarrollan los videojuegos.<br> 
 Las compras se haran con tarjeta o en su defecto a contrareembolso para mayor comodidad de los usuarios.<br>
 Las hojas de reclamaciones estan a disposicion de los usuarios<br>
-Estamos atentos a los comentariso por si hay algun incidente en nuestra pagina web.
-
-</p>
-
+Estamos atentos a los comentarios por si hay algun incidente en nuestra pagina web.<br>Esperemos que sea de su agrado. Que tenga un buen dia</p>
 		</div>
 {% else %}
 		<p>No hay videojuegos</p>			

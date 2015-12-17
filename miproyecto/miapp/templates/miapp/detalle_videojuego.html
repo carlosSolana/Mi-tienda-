@@ -13,14 +13,17 @@
 			{% endfor %}
 		</ul>
 		<p>{{ videojuego.fecha|date:"D d M Y - H:i" }}<p/>
-	<div>
+
+	<div id="Grande">
+	<div class="1">
 		<img id="foto_videojuego" src="/{{videojuego.foto}}">
 		<a href="{% url 'indice' %}">Volver</a> 
 	</div>
 	
-	<div>
-		<p>Este videojuego de estrategia es uno de los mas completos y adictivos de la historia con millones de jugadores en el mundo</p>
-	<div>
+	<div id="2">
+		<p>{{videojuego.descripcion}}</p>
+	</div>
 
+	</div>
 </body>
 </html>

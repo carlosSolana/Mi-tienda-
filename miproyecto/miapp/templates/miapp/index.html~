@@ -20,7 +20,7 @@
 	</ul>
 </nav>
 {% if lista_videojuegos %}
-	<table border="2">
+	<table id="tabla" border="2">
 		<tr>
 			<td>Nombre</td>
 			<td>fecha</td>
@@ -32,6 +32,14 @@
 		</tr>
 {% endfor %}
 	</table>
+		<div id="descripcion">
+			
+			<p>Esta es la web de compra y venta de videojuegos refetrente en cualquier ambito de las plataformas en que se desarrollan los videojuegos. 
+Las compras se haran con tarjeta o en su defecto a contrareembolso para mayyor comodidad de los usuarios.
+
+</p>
+
+		</div>
 {% else %}
 		<p>No hay videojuegos</p>			
 {% endif %}

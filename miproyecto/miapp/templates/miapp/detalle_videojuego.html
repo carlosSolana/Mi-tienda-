@@ -1,6 +1,8 @@
+	{% load staticfiles %}
 <html>
 <head>
 	<title>Videojuegos</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/videojuego.css" %}">
 </head>
 <body>
 		<h1>{{videojuego.nombre}}</h1>

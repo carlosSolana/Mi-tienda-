@@ -1,18 +1,19 @@
+	{% load staticfiles %}
 <html>
 <head>
 	<title>Videojuegos</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/videojuego.css" %}">
 </head>
 <body>
 		<h1>{{videojuego.nombre}}</h1>
-		<p>{{videojuego.instrucciones}}</p>
 		<ul>
 				
-			{% for Proveedor in Videojuegos.Proveedores.all %}
-				<li>{{ Proveddor.nombre }}</li>
+			{% for Proveedor in videojuego.Proveedores.all %}
+				<li>{{ Proveedor.nombre }}</li>
 			{% endfor %}
 		</ul>
 		<p>{{ videojuego.fecha|date:"D d M Y - H:i" }}<p/>
-		<img src="/{{videojuego.foto}}">
+		<img id="foto_videojuego" src="/{{videojuego.foto}}">
 		<a href="{% url 'indice' %}">Volver</a> 
 </body>
 </html>

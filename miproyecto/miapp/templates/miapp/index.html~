@@ -1,6 +1,8 @@
+{% load staticfiles %}
 <html>
 <head>
 <title>videojuegos</title>
+<link rel="stylesheet" type="text/css" href="{% static "css/videojuego.css" %}">
 </head>
 <body>
 		{% if user.is_authenticated %}
@@ -30,7 +32,7 @@
 {% endfor %}
 	</table>
 {% else %}
-		<p>No hay recetas</p>			
+		<p>No hay videojuegos</p>			
 {% endif %}
  
 </body>
